@@ -116,6 +116,7 @@ A grillage model was used for structural analysis. The deck is idealized as a gr
 \hline
 \endfirsthead
 
+\multicolumn{9}{c}{{\small\textit{(Table Summary of Maximum Demands --- Continued from previous page)}}} \\[4pt]
 \hline
 \multirow{2}{*}{\makecell{\textbf{Load}\\\textbf{Case/}\\\textbf{Comb.}}}
 & \multicolumn{3}{c|}{\textbf{Bending Moment}}
@@ -134,18 +135,34 @@ A grillage model was used for structural analysis. The deck is idealized as a gr
 \hline
 \endhead
 
-""" + merged_body + r"""
+\hline
+\multicolumn{9}{r}{{\scriptsize\textit{Continued on next page\dots}}} \\
+\endfoot
 
 \hline
+\endlastfoot
+
+""" + merged_body + r"""
 \end{longtable}
 \endgroup
 
 \vspace{1em}
 \begin{longtable}{|>{\centering\arraybackslash}p{5.2cm}|>{\centering\arraybackslash}p{5.2cm}|>{\centering\arraybackslash}p{5.2cm}|}
-\caption{\textbf{Reactions at Supports}}
+\caption{\textbf{Reactions at Supports}} \\
 \hline
 \textbf{Load Case} & \textbf{Left Support (kN)} & \textbf{Right Support (kN)} \\[6pt]
 \hline
+\endfirsthead
+\multicolumn{3}{c}{{\small\textit{(Table Reactions at Supports --- Continued from previous page)}}} \\[4pt]
+\hline
+\textbf{Load Case} & \textbf{Left Support (kN)} & \textbf{Right Support (kN)} \\[6pt]
+\hline
+\endhead
+\hline
+\multicolumn{3}{r}{{\scriptsize\textit{Continued on next page\dots}}} \\
+\endfoot
+\hline
+\endlastfoot
  & """ + '' + r""" & """ + '' + r""" \\[6pt]
 \hline
  & """ + '' + r""" & """ + '' + r""" \\[6pt]
@@ -156,10 +173,21 @@ A grillage model was used for structural analysis. The deck is idealized as a gr
 
 \vspace{1em}
 \begin{longtable}{|L{7cm}|p{8.5cm}|}
-\caption{\textbf{Deflection Summary (Live Load \& Total Load)}}
+\caption{\textbf{Deflection Summary (Live Load \& Total Load)}} \\
 \hline
 \textbf{parameter} & \textbf{value} \\
 \hline
+\endfirsthead
+\multicolumn{2}{c}{{\small\textit{(Table Deflection Summary --- Continued from previous page)}}} \\[4pt]
+\hline
+\textbf{parameter} & \textbf{value} \\
+\hline
+\endhead
+\hline
+\multicolumn{2}{r}{{\scriptsize\textit{Continued on next page\dots}}} \\
+\endfoot
+\hline
+\endlastfoot
 \textnormal{Deflection due to Live Load, $\delta_{LL}$} & """ + _live_str + r""" \\[6pt]
 \hline
 \textnormal{Allowable Live Load Deflection ($\Delta_{allow}$)} & """ + _allow_live_str + r""" \\[6pt]

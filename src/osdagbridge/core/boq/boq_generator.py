@@ -107,7 +107,7 @@ def calculate_material_quantities(inputs: dict, outputs: dict) -> dict:
 
         # 1. Concrete deck volume (Cu.m) and Weight (MT)
         overall_width_val = inputs.get("typical_section.overall_bridge_width")
-        deck_thickness_val = inputs.get(KEY_TS_DECK_THICKNESS)
+        deck_thickness_val = inputs.get(KEY_TS_DECK_THICKNESS) or inputs.get("typical_section.deck_slab_thickness")
         
         if overall_width_val is not None and deck_thickness_val is not None:
             try:
